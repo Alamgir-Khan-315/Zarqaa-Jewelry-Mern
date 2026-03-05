@@ -2,10 +2,12 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { useProducts } from '../context/ProductContext';
 import ProductCard from '../components/ui/ProductCard';
+import Shop_by_catagory from '../components/Home/Shop by catagory';
+import Testimonials_section from '../components/Home/Testimonials_section';
+import Newsletter_section from '../components/Home/Newsletter_section';
 
 export default function Home() {
   const { products } = useProducts();
-  // Get a few featured products (e.g., first 4)
   const featuredProducts = products.slice(0, 4);
 
   return (
@@ -49,6 +51,9 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-l from-transparent to-amber-50 dark:to-gray-900"></div>
         </div>
       </section>
+
+      {/* Shop by Category */}
+      <Shop_by_catagory />
 
       {/* Featured Products Section */}
       <section className="py-16 md:py-24">
@@ -117,6 +122,12 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Testimonials Section */}
+      <Testimonials_section />
+
+      {/* Newsletter Section */}
+      <Newsletter_section />
 
     </div>
   );

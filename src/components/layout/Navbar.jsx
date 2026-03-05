@@ -29,8 +29,10 @@ export default function Navbar() {
                 Zarqaa Jewelry
               </span>
             </Link>
-            
-            <div className="hidden md:ml-10 md:flex md:space-x-8">
+          </div>
+
+          {/* nav links */}
+          <div className="hidden md:ml-10 md:flex md:space-x-8">
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
@@ -44,7 +46,6 @@ export default function Navbar() {
                   {link.name}
                 </Link>
               ))}
-            </div>
           </div>
 
           {/* Right side items (Theme, Cart, Mobile Menu Toggle) */}
