@@ -6,6 +6,7 @@ import { ProductProvider } from './context/ProductContext';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import CartDrawer from './components/cart/CartDrawer';
+import WhatsAppButton from './components/common/WhatsAppButton';
 
 // Client Pages
 import Home from './pages/Home';
@@ -25,6 +26,7 @@ function App() {
           <Router>
             <div className="min-h-screen bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 font-sans transition-colors duration-300 flex flex-col pt-safe">
               <CartDrawer />
+              <WhatsAppButton />
               
               <Routes>
                 {/* Admin Routes (No Client Navbar/Footer) */}
